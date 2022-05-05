@@ -14,12 +14,12 @@ public class Login {
     WebDriver driver;
     WebDriverWait wait;
 
-    public Login(WebDriver driver){
-        this.driver=driver;
-        PageFactory.initElements(driver,this);
+    public Login(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
-    public void validLogin(){
+    public void validLogin() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
@@ -39,7 +39,7 @@ public class Login {
         btnLogOut.click();
     }
 
-    public void invalidUserName(){
+    public void invalidUserName() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
@@ -54,11 +54,11 @@ public class Login {
         wait.until(ExpectedConditions.elementToBeClickable(btnSubmit));
         btnSubmit.click();
 
-        String errorMessage=driver.findElement(By.className("error")).getText();
+        String errorMessage = driver.findElement(By.className("error")).getText();
         Assert.assertTrue(errorMessage.contains("Credentials rejected by domain: dsi"));
     }
 
-    public void invalidPassword(){
+    public void invalidPassword() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
@@ -73,11 +73,11 @@ public class Login {
         wait.until(ExpectedConditions.elementToBeClickable(btnSubmit));
         btnSubmit.click();
 
-        String errorMessage=driver.findElement(By.className("error")).getText();
+        String errorMessage = driver.findElement(By.className("error")).getText();
         Assert.assertTrue(errorMessage.contains("Credentials rejected by domain: dsi"));
     }
 
-    public void emptyField(){
+    public void emptyField() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
@@ -89,7 +89,7 @@ public class Login {
         btnSubmit.click();
     }
 
-    public void rememberMeClick(){
+    public void rememberMeClick() {
         wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
