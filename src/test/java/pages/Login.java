@@ -20,7 +20,7 @@ public class Login {
     }
 
     public void validLogin(){
-        wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
         btnLogin.click();
@@ -40,7 +40,7 @@ public class Login {
     }
 
     public void invalidUserName(){
-        wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
         btnLogin.click();
@@ -59,7 +59,7 @@ public class Login {
     }
 
     public void invalidPassword(){
-        wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
         btnLogin.click();
@@ -78,7 +78,7 @@ public class Login {
     }
 
     public void emptyField(){
-        wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
         btnLogin.click();
@@ -90,7 +90,7 @@ public class Login {
     }
 
     public void rememberMeClick(){
-        wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement btnLogin = driver.findElement(By.id("loginLink"));
         wait.until(ExpectedConditions.elementToBeClickable(btnLogin));
         btnLogin.click();
